@@ -17,7 +17,7 @@ function App() {
         </a>
       </div>
       <h1>Good Morning</h1>
-      <h2>It's Thursday Again</h2>
+      <h2>It's Thursday Again, Why is it changed automatically</h2>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
