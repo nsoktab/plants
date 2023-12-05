@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { AuthUserContext } from "../App";
 
 export default function Student() {
-  const [user, setUser] = useState;
-  useEffec;
+  const user = useContext(AuthUserContext);
   return (
     <div>
-      <h1>Student</h1>
+      <h1>{user.name}</h1>
+      <h2>{user.age}</h2>
+      <h2>{user.mood}</h2>
     </div>
   );
 }
