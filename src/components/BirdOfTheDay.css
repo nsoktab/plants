@@ -1,0 +1,73 @@
+.birdOfTheDayContainer {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to bottom,
+    rgb(21, 20, 20) 70%,
+    rgb(255, 255, 255) 70%
+  );
+  position: relative;
+}
+
+.birdOfTheDayCard {
+  width: 80%;
+  height: 500px;
+  border-radius: 16px;
+  position: relative;
+  display: inline-block; /* Ensures the overlay covers only the image, not the entire container */
+  justify-content: center;
+  z-index: 100;
+}
+.birdOfTheDayCard img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+.overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(164.07, 163.18, 163.18, 0.28) 50%,
+    rgb(3, 0, 0) 90%
+  );
+  pointer-events: none; /* This allows clicks to go through the overlay */
+}
+.birdOfTheDayContent {
+  position: absolute;
+  top: 70%;
+  color: white; /* Set text color to white or a suitable color */
+  z-index: 1; /* Ensure content is on top of the overlay */
+  width: 80%;
+  padding: 20px;
+}
+.birdOfTheDayContent h4 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.birdOfTheDayContent h6 {
+  font-weight: 400;
+}
+.birdOfTheDayContent hr {
+  border: none;
+  height: 1px;
+  background-color: black;
+  width: 70%;
+  margin: 2px 0px;
+}
+.funfactBird {
+  margin-top: 8px;
+  font-size: 0.8rem;
+}

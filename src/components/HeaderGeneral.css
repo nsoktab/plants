@@ -1,0 +1,9 @@
+.logoHeader {
+  width: 20%;
+  margin-left: 1rem;
+}
+
+.headerHomeG {
+  height: 80px;
+  background-color: var(--black);
+}

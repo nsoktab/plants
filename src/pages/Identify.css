@@ -1,0 +1,23 @@
+.identifyCopy {
+  padding: 32px;
+  text-align: center;
+  padding-bottom: 0;
+}
+
+.identifyPlaceholder {
+  width: 80%;
+  height: 60vh;
+  background-color: var(--grey);
+  border: solid 5px var(--yellow);
+  border-radius: 4px;
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.identifyPlaceholder p {
+  width: 75%;
+  font-size: 1rem;
+  font-weight: bold;
+}

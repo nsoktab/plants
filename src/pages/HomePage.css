@@ -1,0 +1,13 @@
+.bigRectangle {
+  width: 100%;
+  height: 100px;
+  background-color: var(--black);
+  z-index: -11;
+  position: relative;
+}
+
+.bigRectangleTwo {
+  width: 100%;
+  height: 1000px;
+  background-color: yellowgreen;
+}

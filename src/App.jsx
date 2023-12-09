@@ -1,47 +1,33 @@
-import { createContext, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-import Student from "./components/Student";
-import Info from "./components/Info";
+import Nav from "./components/Nav";
+import AtlasPage from "./pages/Atlas";
+import BirdPage from "./pages/BirdPage";
+import HomePage from "./pages/HomePage";
+import Identify from "./pages/Identify";
+import SplashPage from "./pages/SplashPage";
+import { Route, Routes, useLocation } from "react-router-dom";
 
-export const AuthUserContext = createContext();
+const App = () => {
+  const location = useLocation();
 
-const user = { name: "Natalia", age: 24, mood: "😆 🌞" };
+  // Conditionally render Nav based on the current route
+  const isSplashPage = location.pathname === "/splash";
+  const showNav = !isSplashPage;
 
-function App() {
-  const [count, setCount] = useState(0);
+  // You can also add more complex logic to conditionally show/hide Nav based on other criteria
 
   return (
     <>
-      <AuthUserContext.Provider value={user}>
-        <Info />
-        <div>
-          <a href="https://vitejs.dev" target="_blank">
-            <img src={viteLogo} className="logo" alt="Vite logo" />
-          </a>
-          <a href="https://react.dev" target="_blank">
-            <img src={reactLogo} className="logo react" alt="React logo" />
-          </a>
-        </div>
-        <h1>Good Morning</h1>
-        <h2>It's Thursday Again, Why is it changed automatically</h2>
-        <div className="card">
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test HMR
-          </p>
-        </div>
-        <p className="read-the-docs">
-          Click on the Vite and React logos to learn more
-        </p>
-
-        <Student />
-      </AuthUserContext.Provider>
+      {showNav && <Nav location={location} />}
+      <Routes>
+        <Route path="/splash" element={<SplashPage />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/atlas" element={<AtlasPage />} />
+        <Route path="/identify" element={<Identify />} />
+        <Route path="/birds/:birdId" element={<BirdPage />} />
+      </Routes>
     </>
   );
-}
+};
 
 export default App;
