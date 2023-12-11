@@ -1,0 +1,20 @@
+.button {
+  /* common styles for all buttons */
+  padding: 10px 20px;
+  margin: 8px 0px;
+  color: var(--grey);
+  background-color: var(--black);
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.fullWidth {
+  width: 80%;
+}
+
+.halfWidth {
+  width: 50%;
+}

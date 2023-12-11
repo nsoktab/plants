@@ -6,4 +6,7 @@
 .headerHomeG {
   height: 80px;
   background-color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

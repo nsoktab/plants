@@ -12,8 +12,7 @@ export default function Nav() {
   const isHomeActive =
     location.pathname === "/" ||
     location.pathname.startsWith("/challenges") ||
-    location.pathname.includes("/postchallenge") ||
-    location.pathname.includes("/challengecompleted");
+    location.pathname.includes("/quiz");
 
   const isAtlasActive =
     location.pathname === "/atlas" || location.pathname.includes("/birds/");
@@ -44,14 +43,14 @@ export default function Nav() {
         <img src={atlas} alt="Atlas of Birds" />
         <span>Atlas</span>
       </NavLink>
-
+      {/*}
       <NavLink
         to="/identify"
         className={`nav-link ${isIdentifyActive ? "active" : ""}`}
       >
         <img src={identify} alt="Identiy Bird" />
         <span>Identify</span>
-      </NavLink>
+  </NavLink>*/}
 
       <NavLink
         to="/profile"

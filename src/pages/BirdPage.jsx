@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import {
   getFirestore,
   doc,
@@ -8,10 +8,10 @@ import {
   collection,
 } from "firebase/firestore";
 import app from "../config/firebase";
-import arrow from "../assets/arrow.svg";
 import "../pages/BirdPage.css";
 import ImageSwiper from "../components/ImageSwiper";
 import bird from "../assets/bird.svg";
+import HeaderWithArrow from "../components/HeaderWithArrow";
 
 const BirdPage = () => {
   const { birdId } = useParams();
@@ -52,28 +52,13 @@ const BirdPage = () => {
     fetchBirdData();
   }, [birdId]);
 
-  //handle goBack navigation
-  const navigate = useNavigate();
-  const handleGoBack = () => {
-    navigate(-1); // This will navigate one page back
-  };
-
   if (!birdData) {
     return <div>Loading...</div>;
   }
 
   return (
     <div>
-      <header className="birdPageHeader">
-        <img
-          src={arrow}
-          alt="Arrow to lead page back"
-          className="backArrow"
-          onClick={handleGoBack}
-        />
-        <h2 className="birdPageName">{birdData.name}</h2>
-      </header>
-
+      <HeaderWithArrow title={birdData.name} />
       <ImageSwiper images={birdData.images} />
 
       <section className="birdPageContent">
