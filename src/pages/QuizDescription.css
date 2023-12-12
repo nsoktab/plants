@@ -1,3 +1,12 @@
+.quizDescription {
+  display: flex;
+  justify-content: center;
+  background-color: var(--yellow);
+  position: relative;
+  height: calc(90vh - 80px - 70px);
+  padding: 40px 16px;
+}
+
 .quizDescriptionContent {
   display: flex;
   flex-direction: column;
@@ -5,10 +14,8 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 90%;
   /* other styles */
 }
 
@@ -20,7 +27,7 @@
 }
 
 .quizDescriptionContent p {
-  width: 100%;
+  width: 90%;
   margin-bottom: 50px;
 }
 

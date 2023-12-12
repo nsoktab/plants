@@ -105,6 +105,9 @@ const AtlasPage = () => {
     navigate(`/birds/${birdId}`);
   }
 
+  function hasBirdsStartingWith(letter) {
+    return birds.some((bird) => bird.name.startsWith(letter));
+  }
   return (
     <>
       <HeaderGeneral />
@@ -148,7 +151,14 @@ const AtlasPage = () => {
                 fontWeight: letter === visibleLetter ? "bold" : "normal",
               }}
             >
-              {letter}
+              <span
+                key={letter}
+                className={`alphabet-letter ${
+                  hasBirdsStartingWith(letter) ? "" : "no-birds"
+                }`}
+              >
+                {letter}
+              </span>
             </a>
           ))}
         </div>

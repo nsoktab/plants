@@ -9,7 +9,7 @@ export default function HeaderGeneral(props) {
           alt="App logo - flying small, yellow bird"
           className="logoHeader"
         />
-        <h1>{props.title}</h1>
+        <h1 className={props.className}>{props.title}</h1>
         <div className="logoHeader"></div>
       </div>
     </header>

@@ -25,7 +25,13 @@
   font-family: var(--logo-font);
   font-weight: lighter;
   font-size: 1rem;
-  margin-bottom: 2px;
+  margin-bottom: 0px;
+}
+.alphabet-letter {
+  font-family: var(--logo-font);
+}
+.alphabet-letter.no-birds {
+  opacity: 0.3;
 }
 .separator {
   background-color: var(--yellow);

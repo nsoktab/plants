@@ -10,3 +10,7 @@
   align-items: center;
   justify-content: space-between;
 }
+.smallerFont {
+  font-size: 1.25rem !important;
+  text-align: center;
+}

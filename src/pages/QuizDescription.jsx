@@ -16,13 +16,15 @@ export default function QuizDescription() {
   }
 
   return (
-    <section className="quizDescription">
+    <>
       <HeaderGeneral title="Quiz" />
-      <div className="quizDescriptionContent">
-        <h4>{quiz.title}</h4>
-        <p>{quiz.description}</p>
-        <Button to={`/quizzes/${quizId}/1`} text="Start Quiz" />
-      </div>
-    </section>
+      <section className="quizDescription">
+        <div className="quizDescriptionContent">
+          <h4>{quiz.title}</h4>
+          <p>{quiz.description}</p>
+          <Button to={`/quizzes/${quizId}/1`} text="Start Quiz" />
+        </div>
+      </section>
+    </>
   );
 }

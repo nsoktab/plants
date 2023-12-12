@@ -1,11 +1,13 @@
 import "./App.css";
 import Nav from "./components/Nav";
 import QuestionPage from "./components/QuestionPage";
+import QuizResults from "./components/QuizResults";
 import { QuizProvider } from "./config/QuizContext";
 import AtlasPage from "./pages/Atlas";
 import BirdPage from "./pages/BirdPage";
 import HomePage from "./pages/HomePage";
 import Identify from "./pages/Identify";
+import Profile from "./pages/Profile";
 import QuizDescription from "./pages/QuizDescription";
 import QuizzesOverview from "./pages/QuizzesOverview";
 import SplashPage from "./pages/SplashPage";
@@ -29,6 +31,7 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/atlas" element={<AtlasPage />} />
           <Route path="/identify" element={<Identify />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/birds/:birdId" element={<BirdPage />} />
           <Route path="/quizzes" element={<QuizzesOverview />} />
           <Route path="/quizzes/:quizId" element={<QuizDescription />} />
@@ -36,6 +39,7 @@ const App = () => {
             path="/quizzes/:quizId/:questionNumber"
             element={<QuestionPage />}
           />
+          <Route path="/quizzes/:quizId/results" element={<QuizResults />} />
         </Routes>
       </QuizProvider>
     </>
