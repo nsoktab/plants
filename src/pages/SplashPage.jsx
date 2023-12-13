@@ -1,17 +1,16 @@
 import { useEffect } from "react";
 import logo from "../assets/logo.png";
 import "../pages/SplashPage.css";
+import { useNavigate } from "react-router-dom";
 
 export default function SplashPage() {
-  useEffect(() => {
-    // After 2000 milliseconds (2 seconds), redirect to the homepage
-    const timeoutId = setTimeout(() => {
-      window.location.href = "/"; // Redirect to the homepage
-    }, 2000);
+  const navigate = useNavigate();
 
-    // Clear the timeout when the component unmounts
-    return () => clearTimeout(timeoutId);
-  }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      navigate("/home");
+    }, 2000); // redirect after 3 seconds
+  }, [navigate]);
 
   return (
     <div className="splash">

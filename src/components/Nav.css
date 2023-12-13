@@ -10,6 +10,7 @@
   justify-content: space-around;
   align-items: center;
   height: 70px;
+  z-index: 1000;
 }
 
 /* Style the links inside the navigation bar */

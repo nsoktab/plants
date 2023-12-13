@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../assets/logo.png"; // Replace with the actual path to your logo
+import logo from "../assets/logo.webp"; // Replace with the actual path to your logo
 import "../components/HomeHeader.css";
 
 const HomeHeader = () => {

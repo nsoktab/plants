@@ -1,0 +1,25 @@
+.imgPigeon {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+}
+
+.observationCardEmpty {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center; /* This will center vertically */
+  height: 100%; /* Ensure the container takes up full height */
+  margin-bottom: 32px;
+}
+
+.contentObservationCard {
+  position: absolute;
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  background-color: var(--white);
+  padding: 12px 0px 8px 0px;
+  margin: auto;
+  border-radius: 8px;
+}

@@ -1,0 +1,122 @@
+.createAccount {
+  transition: transform 0.6s ease-in, visibility 0s 0.3s;
+  transform: translateY(100%);
+  visibility: hidden;
+}
+
+.createAccount.visible {
+  transform: translateY(0);
+  visibility: visible;
+  transition: transform 0.6s ease-in;
+}
+
+.createAccountHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 16px 16px 0px 16px;
+  align-items: center;
+}
+.logo {
+  width: 25%;
+}
+
+.closeCreateAccount {
+  color: var(--grey);
+  padding: 8px;
+  font-weight: lighter;
+}
+
+.createAccountContainer {
+  background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.createAccountContainer p {
+  padding: 8px 48px 16px 48px;
+  text-align: center;
+}
+
+.createText {
+  color: var(--white);
+}
+
+.createAccountOptionsContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--grey);
+  width: 78%;
+  height: 100vh;
+  padding: 48px 24px;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.createAccountForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.createAccountForm input {
+  margin: 4px 0px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--white);
+}
+
+.hr-text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hr-text::before,
+.hr-text::after {
+  content: "";
+  flex-grow: 1;
+  background: var(--yellow);
+  height: 1px;
+  font-size: 0px;
+  line-height: 0px;
+  margin: 16px 0px;
+}
+
+.hr-text span {
+  margin: 0px 8px;
+  font-size: 0.75rem;
+}
+
+.googleBtn,
+.facebookBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.googleBtn {
+  background-color: #4285f4 !important;
+}
+
+.facebookBtn {
+  background-color: #3b5998 !important;
+}
+
+.googleBtn svg,
+.facebookBtn svg {
+  margin-right: 5px;
+}
+
+.createP {
+  padding: 4px !important;
+}

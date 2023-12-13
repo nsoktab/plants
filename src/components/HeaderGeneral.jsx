@@ -1,4 +1,4 @@
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.webp";
 import "../components/HeaderGeneral.css";
 export default function HeaderGeneral(props) {
   return (

@@ -4,5 +4,24 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  margin: 20px 16px;
+  background-color: var(--white);
+  width: 90%;
+  border-radius: 16px;
+}
+
+.quizResultsContainer .separator {
+  width: 85%;
+  height: 2px;
+  background-color: var(--yellow);
+  margin: 4px 0;
+  margin-bottom: 30px;
+}
+
+.quizScore {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+.messageQuiz {
+  font-weight: bold;
+  margin-bottom: 16px;
 }

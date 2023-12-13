@@ -10,9 +10,7 @@ export default function Nav() {
   console.log(location);
 
   const isHomeActive =
-    location.pathname === "/" ||
-    location.pathname.startsWith("/challenges") ||
-    location.pathname.includes("/quiz");
+    location.pathname === "/home" || location.pathname.includes("/quiz");
 
   const isAtlasActive =
     location.pathname === "/atlas" || location.pathname.includes("/birds/");
@@ -29,7 +27,7 @@ export default function Nav() {
     <nav className="bottom-nav">
       <NavLink
         exact
-        to="/"
+        to="/home"
         className={`nav-link ${isHomeActive ? "active" : ""}`}
       >
         <img src={home} alt="Home" />

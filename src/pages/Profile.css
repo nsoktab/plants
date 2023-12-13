@@ -1,0 +1,46 @@
+.blackContainer {
+  background-color: var(--black);
+  height: 150px;
+  width: 100%;
+}
+
+.profileElements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapProfile {
+  width: 80%;
+  height: 200px;
+  border-radius: 16px;
+  object-fit: cover;
+  margin-top: -140px;
+}
+.optionsProfile {
+  width: 80%;
+}
+.optionProfile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--yellow);
+  border-radius: 8px;
+  width: 100%;
+  padding: 12px 0px;
+  margin-top: 8px;
+}
+.optionProfile p {
+  margin-left: 16px;
+  font-weight: 500;
+}
+.optionProfile img {
+  margin-right: 16px;
+  width: 4%;
+}
+
+.logOut {
+  margin-top: 24px;
+}
