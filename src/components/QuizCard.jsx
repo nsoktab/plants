@@ -11,9 +11,13 @@ const QuizCard = ({ quiz, fullWidth }) => {
     backgroundPosition: "center",
   };
 
-  const cardClass = fullWidth
+  let cardClass = fullWidth
     ? "quizCard fullWidthCard"
     : "quizCard halfWidthCard";
+
+  if (window.innerWidth < 230) {
+    cardClass = "quizCard fullWidthCard";
+  }
 
   const navigate = useNavigate();
 

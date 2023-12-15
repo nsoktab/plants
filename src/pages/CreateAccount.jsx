@@ -56,9 +56,8 @@ export default function CreateAccount() {
             CLOSE
           </h4>
         </div>
-        <h2 className="createText">Create an Account</h2>
+        <h2 className="createTextH">Create an Account</h2>
         <p className="createText">
-          {" "}
           With an account on Birdspotter you can keep track of the observations
           you've made.
         </p>

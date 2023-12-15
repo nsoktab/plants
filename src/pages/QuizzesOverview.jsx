@@ -9,11 +9,12 @@ export default function QuizzesOverview() {
   return (
     <>
       <HeaderWithArrow title="Quizzes" />
-
-      <section className="quizzesOverview">
-        {quizzes.map((quiz) => (
-          <QuizCard key={quiz.id} quiz={quiz} fullWidth={true} />
-        ))}
+      <section className="quizzesPage">
+        <section className="quizzesOverview">
+          {quizzes.map((quiz) => (
+            <QuizCard key={quiz.id} quiz={quiz} fullWidth={true} />
+          ))}
+        </section>
       </section>
     </>
   );

@@ -41,7 +41,8 @@
   text-align: center;
 }
 
-.createText {
+.createText,
+.createTextH {
   color: var(--white);
 }
 
@@ -119,4 +120,26 @@
 
 .createP {
   padding: 4px !important;
+}
+
+@media screen and (max-width: 230px) {
+  .createAccountOptionsContainer {
+    padding: 16px 0px;
+    width: 100%;
+  }
+  .createTextH {
+    width: 100%;
+    font-size: 1.25rem;
+    margin-top: 10px;
+  }
+  .createAccountContainer p {
+    width: 100%;
+    padding: 4px 0px;
+  }
+  .createAccountHeader {
+    margin-top: 200px;
+  }
+  .createP {
+    width: 90% !important;
+  }
 }

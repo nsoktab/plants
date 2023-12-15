@@ -14,3 +14,18 @@
   font-size: 1.25rem !important;
   text-align: center;
 }
+
+@media screen and (max-width: 230px) {
+  /* Styles for small screens */
+  .logoHeader {
+    width: 30%;
+    margin-left: 0.5rem;
+  }
+  .headerHomeG {
+    height: 60px;
+  }
+  .smallerFont {
+    text-align: left;
+    font-size: 1rem !important;
+  }
+}

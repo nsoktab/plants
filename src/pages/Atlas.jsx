@@ -116,25 +116,26 @@ const AtlasPage = () => {
           {Object.entries(groupedBirds).map(([letter, birdGroup]) => (
             <div className="birdLetterGroup" key={letter}>
               <h2 id={letter}>{letter}</h2>
-              <hr className="separator" />
+              <hr className="separator" role="presentation" />
               <div>
                 {birdGroup.map((bird) => (
                   <div
                     className="birdItemAtlas"
                     key={bird.id}
                     onClick={() => handleClick(bird.id)}
+                    aria-label={`Read more about ${bird.name}`}
                   >
                     {bird.images.length > 0 && (
                       <img
                         src={bird.images[0].image}
-                        alt={`Image of ${bird.name}`}
+                        alt={`${bird.name}`}
                         className="birdItemAtlasImage"
                       />
                     )}
 
                     <div className="birdItemAtlasNames">
-                      <h4>{bird.name}</h4>
-                      <h5>{bird.nameLatin}</h5>
+                      <h4 aria-label="English Name">{bird.name}</h4>
+                      <h5 aria-label="Latin Name">{bird.nameLatin}</h5>
                     </div>
                   </div>
                 ))}
@@ -146,6 +147,7 @@ const AtlasPage = () => {
           {Array.from(alphabet).map((letter) => (
             <a
               href={`#${letter}`}
+              alt={`Birds starting with letter ${letter}`}
               key={letter}
               style={{
                 fontWeight: letter === visibleLetter ? "bold" : "normal",

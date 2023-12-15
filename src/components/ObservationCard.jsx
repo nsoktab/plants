@@ -14,7 +14,11 @@ export default function ObservationCard({ observation }) {
         <h4>You have no observations yet!</h4>
         <div className="btnContainer">
           {" "}
-          <Button text="Add an observation" to="/createAccount" />
+          <Button
+            text="Add an observation"
+            to="/createAccount"
+            ariaLabel="Button - Add an observation"
+          />
         </div>
       </div>
     </div>

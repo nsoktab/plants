@@ -72,3 +72,12 @@
   margin-top: 8px;
   font-size: 0.8rem;
 }
+
+@media screen and (max-width: 230px) {
+  .birdOfTheDayCard {
+    width: 90%;
+  }
+  .birdOfTheDayContent {
+    top: 60%;
+  }
+}

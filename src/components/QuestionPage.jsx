@@ -34,6 +34,10 @@ const QuestionPage = () => {
     }
     setAnswerChosen(true);
   };
+  const [isOpen, setIsOpen] = useState(false);
+  const handleImageClick = () => {
+    setIsOpen(true);
+  };
 
   if (!quiz) {
     return <p>Quiz is loading</p>;
@@ -76,6 +80,7 @@ const QuestionPage = () => {
             src={image}
             alt="Image of the correct bird"
             className="imgQuiz"
+            onClick={handleImageClick}
           />
         )}
         <div className="answersQuiz">
@@ -109,7 +114,21 @@ const QuestionPage = () => {
             <Button
               onClick={handleNextQuestion}
               text={isLastQuestion ? "FINISH QUIZ" : "Next Question"}
+              ariaLabel={
+                isLastQuestion
+                  ? "Button - Finish Quiz"
+                  : "Button - Next Question"
+              }
             />
+          </div>
+        )}
+        {/*Image overlay when it's clicked */}
+        {isOpen && (
+          <div className="modal">
+            <span className="close" onClick={() => setIsOpen(false)}>
+              &times;
+            </span>
+            <img className="modal-content" src={image} />
           </div>
         )}
       </div>

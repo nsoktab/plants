@@ -31,8 +31,10 @@ export default function QuizResults() {
       <section className="quizDescription">
         <div className="quizResultsContainer">
           <h2>{quizTitle}</h2>
-          <hr className="separator" />
-          <h2 className="quizScore">{correctAnswersCount}/5</h2>
+          <hr className="separator" role="presentation" />
+          <h2 className="quizScore" aria-label="Your score is: ">
+            {correctAnswersCount}/5
+          </h2>
           <p className="messageQuiz">{message}</p>
           <Button text="ALL QUIZZES" to="/quizzes" />
         </div>

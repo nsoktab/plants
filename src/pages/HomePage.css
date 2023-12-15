@@ -26,3 +26,12 @@
 .headingHome {
   font-size: 1.25rem;
 }
+
+@media screen and (max-width: 230px) {
+  .quizCardsHome {
+    flex-direction: column !important;
+  }
+  .quizCardsHome > * {
+    margin-bottom: 8px;
+  }
+}

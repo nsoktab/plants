@@ -27,7 +27,12 @@ export default function HomePage() {
             <QuizCard key={quiz.id} quiz={quiz} />
           ))}
         </div>
-        <Button to="/quizzes" text="View all quizzes" fullWidth={true} />
+        <Button
+          to="/quizzes"
+          text="View all quizzes"
+          fullWidth={true}
+          ariaLabel="Button - View All Quizzes"
+        />
       </section>
     </>
   );

@@ -63,6 +63,7 @@ const BirdOfTheDay = () => {
         <div
           className="birdOfTheDayCard"
           onClick={() => handleClick(randomBird.id)}
+          aria-label="Bird of the Day - Click to learn more"
         >
           <img
             src={
@@ -73,7 +74,7 @@ const BirdOfTheDay = () => {
 
           <div className="birdOfTheDayContent">
             <h4>{randomBird.name}</h4>
-            <hr />
+            <hr role="presentation" />
             <h6>Get to know it better</h6>
             <p className="funfactBird">{randomBird.funfacts[0]}</p>
           </div>

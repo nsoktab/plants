@@ -22,3 +22,18 @@
   text-align: center;
   margin-right: 32px;
 }
+
+@media screen and (max-width: 230px) {
+  .pageHeader {
+    height: 60px;
+  }
+
+  .pageName {
+    margin-right: 0px;
+  }
+
+  .backArrow {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+}

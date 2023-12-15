@@ -11,3 +11,7 @@
 .quizzesOverview > * {
   margin-bottom: 16px;
 }
+
+.quizzesPage {
+  margin: 16px;
+}
